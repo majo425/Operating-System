@@ -13,6 +13,6 @@ jobs:
     - uses: actions/setup-node@v4
     - name: Ejecutar script introducción
       run: |
-        cd Introduccion
-        gcc principal.c -o introduccion
-        ./introduccion
+        cd Introducción
+        gcc principal.c -o ejecutable
+        ./ejecutable
