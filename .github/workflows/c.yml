@@ -10,9 +10,13 @@ jobs:
   folder_introduccion:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/setup-node@v4
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    - name: Instalar dependencias
+      run: sudo apt-get update && sudo apt-get install build-essential
     - name: Ejecutar script introducción
       run: |
-        cd Introducción
+        cd Operating-System/Introducción
         gcc principal.c -o ejecutable
         ./ejecutable
